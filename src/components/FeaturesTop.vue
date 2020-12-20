@@ -9,7 +9,7 @@
         >
       </div>
 
-      <h3 class="uppercase text-xl mt-3 ml-14">
+      <h3 class="mt-3 ml-14">
         <b>
           Bring simplicity
         </b> in the health care managment.
@@ -18,7 +18,7 @@
         Simplicity and logically designed process is everything in day to day work organization With our system you can change the face of medical procedures.
       </p>
     </div>
-    <div class="ml-0.5c w-5.5c bg-yellow mt-20 flex items-center justify-center">
+    <div class="ml-0.5c w-5.5c bg-yellow mt-20 flex items-center justify-center py-24">
       <span class="features-top__square bg-magenta text-white">
         PLUG
       </span>
@@ -51,4 +51,8 @@ export default {
   height: 80px;
   min-width: 155px;
 }
+.features-top__square:last-of-type {
+  transform: translateY(-50%);
+}
+
 </style>

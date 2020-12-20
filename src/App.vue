@@ -24,4 +24,21 @@ export default {
 }
 </script>
 
-<style lang="scss" src="@/styles/global.scss" />
+<style lang="postcss">
+#app {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+*, *:before, *:after {
+  color: #0C2352;
+}
+
+h3 {
+  @apply
+  uppercase
+  text-xl;
+}
+</style>
