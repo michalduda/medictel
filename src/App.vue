@@ -4,6 +4,7 @@
     <MainHeader />
     <WelcomeSection />
     <FeaturesSection />
+    <MissionSection />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import MainHeader from '@/components/MainHeader'
 import MainGrid from '@/components/MainGrid'
 import WelcomeSection from '@/components/WelcomeSection'
 import FeaturesSection from '@/components/FeaturesSection'
+import MissionSection from '@/components/MissionSection'
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     MainHeader,
     MainGrid,
     WelcomeSection,
-    FeaturesSection
+    FeaturesSection,
+    MissionSection
   }
 }
 </script>
