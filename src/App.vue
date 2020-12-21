@@ -5,6 +5,7 @@
     <WelcomeSection />
     <FeaturesSection />
     <MissionSection />
+    <ContactSection />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import MainGrid from '@/components/MainGrid'
 import WelcomeSection from '@/components/WelcomeSection'
 import FeaturesSection from '@/components/FeaturesSection'
 import MissionSection from '@/components/MissionSection'
+import ContactSection from '@/components/ContactSection'
 
 export default {
   name: 'App',
@@ -22,7 +24,8 @@ export default {
     MainGrid,
     WelcomeSection,
     FeaturesSection,
-    MissionSection
+    MissionSection,
+    ContactSection
   }
 }
 </script>

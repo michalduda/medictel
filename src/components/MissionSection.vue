@@ -39,13 +39,13 @@
       <h3 class="font-bold mb-8">
         TECHNOLOGY.
       </h3>
-      <p class="mb-14">
+      <p>
         We trust that our technology is the answer to many challenges encountered in healthcare system, by making the complex processes logical and simple.
       </p>
     </div>
 
     <div class="mission__primary-action">
-      <button class="bg-darkblue text-white py-6 px-14 ">
+      <button class="bg-darkblue text-white py-6 px-14 mt-14">
         PRESS RELEASES
       </button>
     </div>
