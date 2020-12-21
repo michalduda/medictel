@@ -6,6 +6,7 @@
     <FeaturesSection />
     <MissionSection />
     <ContactSection />
+    <MainFooter />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import WelcomeSection from '@/components/WelcomeSection'
 import FeaturesSection from '@/components/FeaturesSection'
 import MissionSection from '@/components/MissionSection'
 import ContactSection from '@/components/ContactSection'
+import MainFooter from '@/components/MainFooter'
 
 export default {
   name: 'App',
@@ -25,7 +27,8 @@ export default {
     WelcomeSection,
     FeaturesSection,
     MissionSection,
-    ContactSection
+    ContactSection,
+    MainFooter
   }
 }
 </script>
