@@ -5,46 +5,20 @@
         <div class="bg-darkblue footer__box-1"></div>
         <div class="bg-magenta footer__box-2"></div>
       </div>
-      <a
-        href=""
-        class="my-6 mx-2 ml-2c"
-      >
-        <img
-          src="@/assets/facebook.svg"
-          alt=""
-          class="w-6"
+      <div class="footer__social-links flex ml-2c">
+        <a
+          v-for="(social, index) in socials"
+          :key="index"
+          :href="social.link"
+          class="my-6 mx-2 "
         >
-      </a>
-      <a
-        href=""
-        class="my-6 mx-2"
-      >
-        <img
-          src="@/assets/instagram.svg"
-          alt=""
-          class="w-6"
-        >
-      </a>
-      <a
-        href=""
-        class="my-6 mx-2"
-      >
-        <img
-          src="@/assets/twitter.svg"
-          alt=""
-          class="w-6"
-        >
-      </a>
-      <a
-        href=""
-        class="my-6 mx-2"
-      >
-        <img
-          src="@/assets/linkedin.svg"
-          alt=""
-          class="w-6"
-        >
-      </a>
+          <img
+            :src="social.image"
+            alt=""
+            class="w-6"
+          >
+        </a>
+      </div>
     </div>
     <div class="flex footer__bottom ml-4c w-8c justify-between items-end">
       <a
@@ -63,6 +37,24 @@
 export default {
   data() {
     return {
+      socials: [
+        {
+          image: require('@/assets/facebook.svg'),
+          link: ''
+        },
+        {
+          image: require('@/assets/instagram.svg'),
+          link: ''
+        },
+        {
+          image: require('@/assets/twitter.svg'),
+          link: ''
+        },
+        {
+          image: require('@/assets/linkedin.svg'),
+          link: ''
+        }
+      ],
       links: [
         {
           label: 'our benefits',
