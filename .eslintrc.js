@@ -68,6 +68,7 @@ module.exports = {
       ],
       'alphabetical': false
     }],
+    'vue/no-multiple-template-root': 'off',
     'vue/mustache-interpolation-spacing': ['warn', 'always']
   },
   'overrides': [
