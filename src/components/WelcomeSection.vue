@@ -1,95 +1,110 @@
 <template>
-  <section class="welcome-section relative mt-24 py-24">
-    <div class="flex">
-      <div class="w-5c ml-1c">
-        <h2 class="text-5xl text-darkblue mb-20">
-          MODULAR<br />
-          MEDICAL<br />
-          SOFTWARE
-        </h2>
-        <div class="flex items-center justify-between">
-          <base-button>
-            get the idea
-          </base-button>
-          <p class="uppercase text-xl mx-4">
-            We believe saving time is cruciaL.
-          </p>
-        </div>
+  <section class="welcome relative mt-8 md:mt-24">
+    <div class="welcome__box-1 bg-blue"></div>
+    <div class="welcome__box-2 bg-green"></div>
 
-      </div>
-      <div class="w-5c">
-        <div class="welcome__video-wrapper">
-          <button class="welcome__play-button">
-            <img
-              src="@/assets/play.svg"
-              alt="Play"
-            >
-          </button>
-          <button class="welcome__fullscreen-button">
-            <img
-              src="@/assets/fullscreen.svg"
-              alt="Fullscreen"
-            >
-          </button>
-          <img
-            src="@/assets/video-cover.png"
-          >
-        </div>
+    <h2 class="welcome__header text-3xl md:text-5xl text-darkblue mb-6 mt-2 md:mb-16 md:mt-0">
+      MODULAR<br />
+      MEDICAL<br />
+      SOFTWARE
+    </h2>
 
-      </div>
-      <div class="welcome__box-1"/>
-      <div class="welcome__box-2"/>
+    <p class="welcome__text uppercase text-xl mb-6 md:mb-0 md:ml-48 mr-8">
+      We believe saving time is cruciaL.
+    </p>
 
+    <WelcomeVideo class="welcome__video mt-8 ml-4 md:m-0" />
+
+    <div class="welcome__button mt-8 md:mt-0">
+      <base-button>
+        get the idea
+      </base-button>
     </div>
+
+    <FeatureBox1 class="welcome__feature mt-4 md:hidden md:m-0" />
+
   </section>
 </template>
 
 <script>
-export default {
+import WelcomeVideo from '@/components/WelcomeVideo.vue'
+import FeatureBox1 from '@/components/FeatureBox1.vue'
 
+export default {
+  components: {
+    WelcomeVideo,
+    FeatureBox1
+  }
 }
 </script>
 
-<style lang="postcss">
-.welcome__video-wrapper {
-  @apply
-    relative;
-}
-.welcome__play-button {
-  @apply
-    absolute
-    left-0
-    w-16;
-  top: 50%;
-  transform: translate(-37%, -50%);
-}
-.welcome__fullscreen-button{
-  @apply
-    absolute
-    right-0
-    top-0
-    w-8;
-  transform: translate(-100%, -50%);
-
+<style lang="scss">
+.welcome {
+  display: grid;
+  grid-template-columns: repeat(12, (100% / 12));
+  grid-template-rows: repeat(5, minmax(10px, auto)) 32px;
 }
 .welcome__box-1 {
-  @apply
-    absolute
-    bg-blue
-    w-6c
-    top-12
-    bottom-12
-    left-2c
-    -z-1
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
 }
+.welcome__header {
+  grid-column: 4 / -1;
+  grid-row: 1 / span 1;
+}
+.welcome__text {
+  grid-column: 2 / -1;
+  grid-row: 2 / span 1;
+}
+.welcome__video {
+  grid-column: 2 / -1;
+  grid-row: 3 / span 1;
+}
+
 .welcome__box-2 {
-  @apply
-    absolute
-    bg-green
-    h-full
-    w-2.5c
-    top-0
-    right-0
-    -z-1;
+  grid-column: 8 / -1;
+  grid-row: 4 / span 4;
+}
+.welcome__button {
+  grid-column: 7 / -1;
+  grid-row: 4 / span 1;
+}
+.welcome__feature {
+  grid-column: 3 / -2;
+  grid-row: 5 / span 1;
+}
+@media (min-width: 768px) {
+  .welcome {
+    display: grid;
+    grid-template-columns: repeat(12, (100% / 12));
+    grid-template-rows: 48px 32px auto minmax(125px, auto) 32px 48px;
+  }
+  .welcome__box-1 {
+    grid-column: 3 / span 6;
+    grid-row: 2 / span 4;
+  }
+  .welcome__header {
+    grid-column: 2 / span 3;
+    grid-row: 3 / span 1;
+  }
+  .welcome__button {
+    grid-column: 2 / span 5;
+    grid-row: 4 / span 1;
+  }
+  .welcome__text {
+    grid-column: 2 / span 5;
+    grid-row: 4 / span 1;
+    justify-self: end;
+    margin-top: 10px;
+  }
+  .welcome__video {
+    grid-column: 7 / span 5;
+    grid-row: 3 / span 2;
+  }
+
+  .welcome__box-2 {
+    grid-column: 11 / span 2;
+    grid-row: 1 / -1;
+  }
 }
 </style>
