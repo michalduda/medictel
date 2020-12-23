@@ -1,5 +1,5 @@
 <template>
-  <div class="mfeature-box-1">
+  <div class="feature-box-1">
     <div>
       <img
         src="@/assets/plus.svg"

@@ -1,5 +1,7 @@
 <template>
-  <div class="features__visual bg-yellow flex items-center justify-center py-12 md:py-24">
+  <div
+    class="features__visual bg-yellow flex items-center justify-center py-12 md:py-24"
+  >
     <span class="features__square bg-magenta text-white">
       PLUG
     </span>
@@ -13,15 +15,12 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="postcss">
 .features__square {
-  @apply
-    flex
+  @apply flex
     items-center
     justify-center
     m-2.5
@@ -30,19 +29,20 @@ export default {
 }
 .features__square:first-of-type,
 .features__square:last-of-type {
-  @apply
-    border-4;
+  @apply border-4;
   height: 60px;
   min-width: 100px;
 }
 @media (min-width: 768px) {
-  .features__square {
-  height: 80px;
-  min-width: 155px;
-}
+  .features__square,
+  .features__square:first-of-type,
+  .features__square:last-of-type {
+    height: 80px;
+    min-width: 155px;
+    @apply border-4;
+  }
   .features__square:last-of-type {
     transform: translateY(-50%);
   }
 }
-
 </style>
