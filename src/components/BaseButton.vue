@@ -1,11 +1,22 @@
 <template>
   <button class="base-button">
     <slot />
-    <img
+    <!-- <img
       src="@/assets/arrow.svg"
       alt=""
       class="base-button__arrow"
+    > -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="base-button__arrow"
+      viewBox="0 0 5 7"
     >
+      <path
+        class="base-button__path"
+        d="M3.5,0,7,5H0Z"
+        transform="translate(5) rotate(90)"
+      />
+    </svg>
   </button>
 </template>
 
@@ -31,9 +42,23 @@ export default {
     hover:bg-darkblue
     hover:text-white;
 }
+.base-button__path{
+  color: inherit;
+}
 .base-button__arrow {
+  color: inherit;
+  fill: currentColor;
   width: .5rem;
   @apply
     ml-4
+}
+.base-button.dark {
+   @apply
+    border-darkblue
+    bg-darkblue
+    text-white
+    font-normal
+    hover:bg-magenta
+    hover:border-magenta
 }
 </style>
