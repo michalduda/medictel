@@ -48,9 +48,9 @@
     </div>
 
     <div class="mission__primary-action">
-      <button class="bg-darkblue text-white py-6 px-14 mt-14">
+      <base-button class="dark mt-14">
         PRESS RELEASES
-      </button>
+      </base-button>
     </div>
 
     <div class="mission__box-background bg-blue"></div>
