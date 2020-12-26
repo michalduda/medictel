@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import DesktopNav from '@/components/DesktopNav'
 import MobileNav from '@/components/MobileNav'
 import HeaderHamburger from '@/components/HeaderHamburger'
 
@@ -30,7 +29,6 @@ export default {
     }
   },
   components: {
-    DesktopNav,
     MobileNav,
     HeaderHamburger
   }
