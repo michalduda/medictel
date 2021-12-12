@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <MainGrid />
     <HeaderMobile v-if="screenMode === 'mobile'"/>
     <HeaderDesktop v-else />
     <WelcomeSection />
@@ -14,7 +13,6 @@
 <script>
 import HeaderDesktop from '@/components/HeaderDesktop'
 import HeaderMobile from '@/components/HeaderMobile'
-import MainGrid from '@/components/MainGrid'
 import WelcomeSection from '@/components/WelcomeSection'
 import FeaturesSection from '@/components/FeaturesSection'
 import MissionSection from '@/components/MissionSection'
@@ -28,7 +26,6 @@ export default {
   components: {
     HeaderDesktop,
     HeaderMobile,
-    MainGrid,
     WelcomeSection,
     FeaturesSection,
     MissionSection,
